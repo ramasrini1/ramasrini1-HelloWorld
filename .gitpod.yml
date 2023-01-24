@@ -5,6 +5,12 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: mvn install -DskipTests=false
+  - init: git remote set-url origin git@github.com:ramasrini1/ramasrini1-HelloWorld.git && sed "s/\r$//" commit-command.sh | bash
+  - command: for i in {1..5}; do code --uninstall-extension vscjava.vscode-java-test; sleep 10; done
+vscode:
+ extensions:
+   - redhat.java
+   - vscjava.vscode-java-debug
+   - revaturePro.revature-labs
 
 
